@@ -1,0 +1,20 @@
+1. Hoisting: Understanding Hoisting in JavaScript
+Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their containing scope during the compile phase. However, only the declarations are hoisted, not the initializations.
+
+javascript
+Copy code
+console.log(a); // undefined
+var a = 5;
+
+console.log(b); // ReferenceError: b is not defined
+let b = 5;
+
+foo(); // "Hello"
+function foo() {
+    console.log("Hello");
+}
+In the example:
+
+var a is hoisted, so a is known at the top but not initialized.
+let b is not hoisted in a way that makes it accessible before the declaration (temporal dead zone).
+Function foo is fully hoisted including its body.

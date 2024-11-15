@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./styles.css" rel="stylesheet">
+
+    <!-- No need to close link tag like this: </link> -->
+    <script src="./scr.js"></script>
+
+    <!-- Our scripts if it contains document.getElementBySomething -->
+    <script defer src="./script.js"></script>
+
+    <!-- it is mostly used by 3rd party Libraries -->
+    <script async src="./google.js"></script>
+    <style>
+        .container {
+            width: 400px;
+            height: 400px;
+            border: 2px solid black;
+            padding: 20px;
+        }
+
+        #grandparent { /* Corrected id name to match JavaScript */
+            width: 300px;
+            height: 300px;
+            background-color: red;
+        }
+
+        #parent {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+
+        #child {
+            width: 50px;
+            height: 50px;
+            background-color: yellow;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Corrected id name to match JavaScript -->
+    event object
+    <div class="container" id="grandparent">grandPareant
+        <div class="container" id="parent">parent
+            <div class="container" id="child">child</div>
+        </div>
+    </div>
+
+    <!-- You already included script.js, no need to include it again -->
+</body>
+
+</html>
